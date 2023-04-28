@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     var studentPlacementTableViewCell : StudentPlacementTableViewCell?
     var uiNib : UINib?
+    var studentPlacementDetailsViewController : StudentlPlacementDetailsViewController?
     
     @IBOutlet weak var placementRecordTableView: UITableView!
     
@@ -45,11 +46,20 @@ extension ViewController : UITableViewDataSource{
         studentPlacementTableViewCell?.designationLabel.text = designation
         return studentPlacementTableViewCell!
     }
+    
+    
 }
 
 extension ViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 180.0
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("The row which is cliked -- \(indexPath.row)")
+        studentPlacementDetailsViewController = self.storyboard?.instantiateViewController(withIdentifier: "StudentlPlacementDetailsViewController") as? StudentlPlacementDetailsViewController
+        
+        studentPlacementDetailsViewController?.nameContainer =  studentNames[indexPath.row]
+        navigationController?.pushViewController(studentPlacementDetailsViewController!, animated: true)
+    }
 }
-

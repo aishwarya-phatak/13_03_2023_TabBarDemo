@@ -8,6 +8,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Item-->
+        <scene sceneID="itm-dE-SvO">
+            <objects>
+                <navigationController id="rCF-Li-5hd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="star" catalog="system" selectedImage="star.fill" id="OZz-XX-LWl"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qDG-py-PTJ">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FMR-wC-W8h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oqF-VD-Q9b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1337" y="429"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -17,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="N3y-tb-Bme">
-                                <rect key="frame" x="20" y="67" width="350" height="654"/>
+                                <rect key="frame" x="20" y="111" width="350" height="610"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -31,13 +48,42 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="featured" id="4ig-Fx-ycU"/>
+                    <navigationItem key="navigationItem" id="1dW-JN-Za8"/>
                     <connections>
                         <outlet property="placementRecordTableView" destination="N3y-tb-Bme" id="uMG-T7-mcS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1292" y="429"/>
+            <point key="canvasLocation" x="-1338" y="1150"/>
+        </scene>
+        <!--Studentl Placement Details View Controller-->
+        <scene sceneID="u3g-DM-zjG">
+            <objects>
+                <viewController storyboardIdentifier="StudentlPlacementDetailsViewController" id="NB2-3P-jnu" customClass="StudentlPlacementDetailsViewController" customModule="_3_03_2023_TabBarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DK0-lS-qNQ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJJ-e4-vqz">
+                                <rect key="frame" x="58" y="121" width="268" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OW9-jZ-tCA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="studentNameLabel" destination="BJJ-e4-vqz" id="pVG-oD-9ml"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Nw-mL-EDX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1338.4615384615383" y="1865.4028436018957"/>
         </scene>
         <!--Home-->
         <scene sceneID="b6D-XD-xIf">
@@ -91,7 +137,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDe-AV-KZX">
-                                <rect key="frame" x="30" y="131" width="330" height="40"/>
+                                <rect key="frame" x="30" y="87" width="330" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="RKe-jf-tbi"/>
                                 </constraints>
@@ -100,7 +146,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rFL-TK-XX3">
-                                <rect key="frame" x="30" y="201" width="330" height="30"/>
+                                <rect key="frame" x="30" y="157" width="330" height="30"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="58J-6f-GON"/>
@@ -110,49 +156,49 @@
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
                             <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RKY-Q0-kWG">
-                                <rect key="frame" x="30" y="251" width="330" height="30"/>
+                                <rect key="frame" x="30" y="207" width="330" height="30"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="family-name"/>
                             </textField>
                             <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NTs-gx-KeE">
-                                <rect key="frame" x="30" y="301" width="330" height="30"/>
+                                <rect key="frame" x="30" y="257" width="330" height="30"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="tel"/>
                             </textField>
                             <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter EmailId" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tPJ-b0-qV6">
-                                <rect key="frame" x="30" y="351" width="330" height="30"/>
+                                <rect key="frame" x="30" y="307" width="330" height="30"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Year of passing" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x4P-Vg-h6x">
-                                <rect key="frame" x="30" y="401" width="330" height="30"/>
+                                <rect key="frame" x="30" y="357" width="330" height="30"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Qualification" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kbx-S7-oNW">
-                                <rect key="frame" x="30" y="451" width="330" height="30"/>
+                                <rect key="frame" x="30" y="407" width="330" height="30"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Area Of Interest" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2EY-Oz-Ffp">
-                                <rect key="frame" x="30" y="501" width="330" height="30"/>
+                                <rect key="frame" x="30" y="457" width="330" height="30"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNO-H7-u8t">
-                                <rect key="frame" x="30" y="571" width="100" height="40"/>
+                                <rect key="frame" x="30" y="527" width="100" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Vlj-01-Ttp"/>
                                     <constraint firstAttribute="width" constant="100" id="tss-r5-3tT"/>
@@ -218,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D0F-x2-dL6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1020" y="1099"/>
+            <point key="canvasLocation" x="1042" y="1880"/>
         </scene>
         <!--Enquiry-->
         <scene sceneID="p1j-J0-7QP">
@@ -230,7 +276,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="8Jb-Eu-68V" kind="relationship" relationship="rootViewController" id="O0S-hE-eIB"/>
+                        <segue destination="i3B-8g-jeI" kind="relationship" relationship="rootViewController" id="8Nx-AZ-00m"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RlQ-6D-NLU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -248,8 +294,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="Tpz-s4-DXN" kind="relationship" relationship="viewControllers" id="Zbi-8I-sJc"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="2nf-13-1nf"/>
                         <segue destination="pc7-VN-dtB" kind="relationship" relationship="viewControllers" id="blr-NR-F53"/>
+                        <segue destination="rCF-Li-5hd" kind="relationship" relationship="viewControllers" id="igJ-gH-URL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BII-TZ-B0N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -266,10 +312,11 @@
                         <viewLayoutGuide key="safeArea" id="1fh-Ot-wUe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="4lf-Rn-HGt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fLq-1k-pCH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1020" y="1807"/>
+            <point key="canvasLocation" x="1042" y="1191"/>
         </scene>
     </scenes>
     <resources>
@@ -277,6 +324,8 @@
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

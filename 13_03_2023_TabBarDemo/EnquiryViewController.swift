@@ -34,6 +34,6 @@ class EnquiryViewController: UIViewController {
         let enquiryDetailsViewController = self.storyboard?.instantiateViewController(withIdentifier: "EnquiryDetailsViewController") as!
         EnquiryDetailsViewController
         
-        navigationController?.pushViewController(enquiryDetailsViewController, animated: true)
+        navigationController?.popViewController(animated: true)
     }
 }
